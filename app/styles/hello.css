@@ -1,0 +1,113 @@
+.hello {
+    border: 2px solid white;
+    border-radius: 3px;
+    padding: 30px 10px 0;
+    display: inline-block;
+    background: black;
+    position: absolute;
+    top: 10%;
+    right: 15%;
+    width: 500px;
+    height: 400px;
+    -webkit-transition: 1s;
+    -moz-transition: 1s;
+    -o-transition: 1s;
+    -ms-transition: 1s;
+    transition: 1s;
+    -webkit-box-shadow: 7px 7px 85px 15px rgba(0, 0, 0, 1);
+    -moz-box-shadow: 7px 7px 85px 15px rgba(0, 0, 0, 1);
+    box-shadow: 7px 7px 85px 15px rgba(0, 0, 0, 1);
+    -webkit-transition-property: -webkit-box-shadow, width, height, top, left, right, padding;
+    -moz-transition-property: -moz-box-shadow, width, height, top, left, right, padding;
+    transition-property: box-shadow, width, height, top, left, right, padding;
+}
+
+.hello-handle {
+	width: 100%;
+	height: 25px;
+	background: #222;
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+
+.hello button {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.hello-content {
+	overflow: hidden;
+	height: 100%;
+}
+
+.hello-content-scroller {
+	height: 320px;
+	overflow-y: auto;
+	line-height: 1.5;
+	text-align: justify;
+	border: solid #222;
+	border-width: 2px 0;
+}
+
+.hello figure {
+	float: right;
+	margin: 20px 0 10px 10px;
+	border: 2px solid white;
+	line-height: 0;
+}
+
+.hello figure > img {
+	width: 196px;
+	height: 230px;
+}
+
+.minimise {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+}
+
+.hello-controls {
+    text-align: center;
+}
+
+.signature {
+	text-align: right;
+}
+
+@media (max-width: 600px) {
+    .hello {
+        top: 5%;
+        right: 5%;
+        width: 90%;
+    }
+
+	.hello figure {
+		margin-top: 45px;
+	}
+
+	.hello figure > img {
+		width: 130px;
+		height: 152px;
+	}
+}
+
+.hello.minimised {
+	width: 40px;
+	height: 30px;
+	padding: 0;
+	right: 0;
+}
+
+.hello:before {
+	content: "";
+	position: absolute;
+	border: solid white;
+	border-width: 5px 0 2px;
+	width: 100%;
+	height: 7px;
+	right: -50%;
+	top: 4px;
+}

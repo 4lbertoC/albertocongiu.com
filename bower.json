@@ -1,0 +1,10 @@
+{
+  "name": "albertocongiu-com3",
+  "private": true,
+  "dependencies": {
+    "modernizr": "~2.8.2",
+    "jqueryui": "~1.11.2",
+    "jqueryui-touch-punch": "*",
+    "font-awesome": "~4.2.0"
+  }
+}
