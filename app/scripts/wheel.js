@@ -1,3 +1,5 @@
+/* global ga */
+
 window.AC.Wheel = (function ($, Modernizr, jsfxlib, mailform, MusicTrigger, Pentagram) {
 	'use strict';
 
@@ -33,7 +35,7 @@ window.AC.Wheel = (function ($, Modernizr, jsfxlib, mailform, MusicTrigger, Pent
 	};
 
 	var _openReader = function () {
-		window._gaq && window._gaq.push(['_trackEvent', 'Play With Notes', 'Reader opened']);
+		ga('send', 'event', 'Play With Notes', 'Reader opened');
 		_reader.removeClass('moved-up');
 		_disc.addClass('should-move');
 		_cmaj.addClass('moved-down');
@@ -48,11 +50,11 @@ window.AC.Wheel = (function ($, Modernizr, jsfxlib, mailform, MusicTrigger, Pent
 				_disc.addClass('moving-disc');
 				_disc.addClass('moved-up');
 				setTimeout(function () {
-					_gaq.push(['_trackEvent', 'Play With Notes', 'Reader closed with disc']);
+					ga('send', 'event', 'Play With Notes', 'Reader closed with disc');
 					window.location = 'http://www.youtube.com/user/taranis86';
 				}, 1500);
 			} else {
-				window._gaq && window._gaq.push(['_trackEvent', 'Play With Notes', 'Reader closed without disc']);
+				ga('send', 'event', 'Play With Notes', 'Reader closed without disc');
 			}
 		}
 	};
